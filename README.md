@@ -1,7 +1,6 @@
 Simple Gulp boilerplate Front-end development for simple projects.
 
 Includes:
-
 "gulp": "^ 4.0.2",
 "gulp-sass": "^ 4.1.0",
 "gulp-concat": "^ 2.6.1",
