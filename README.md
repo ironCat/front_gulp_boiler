@@ -1,6 +1,6 @@
 Simple Gulp boilerplate Front-end development for simple projects.
 
-<b>Includes:</b>
+Includes:
 
 "gulp": "^ 4.0.2",
 "gulp-sass": "^ 4.1.0",
