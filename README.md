@@ -1,4 +1,4 @@
-## Simple Gulp boilerplate Front-end development for simple projects.
+## Light Gulp boilerplate Front-end development for simple projects.
 
 **Includes:**
 - "gulp": "^ 4.0.2",
