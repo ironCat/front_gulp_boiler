@@ -6,7 +6,7 @@ const browserSync  = require('browser-sync').create();
 const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
-const del = require("del");
+const del          = require('del');
 
 function browsersync() {
   browserSync.init({
@@ -25,18 +25,16 @@ function scripts(){
 }
 
 function styles(){
-  return (
-    src("app/scss/*.scss")
-      // .pipe(scss({outputStyle: 'expanded'})) // no min
-      .pipe(scss({ outputStyle: "compressed" }))
-      .pipe(concat("styles.min.css"))
-      .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 version'],
-        grid: true
-      }))
-      .pipe(dest("app/css"))
-      .pipe(browserSync.stream())
-  );
+  return src('app/scss/*.scss')
+    // .pipe(scss({outputStyle: 'expanded'})) // no min
+    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(concat('styles.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 version'],
+      grid: true
+    }))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream());
 }
 
 function watching(){
@@ -46,7 +44,7 @@ function watching(){
 }
 
 function images(){
-  return src("app/images/**/*")
+  return src('app/images/**/*')
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -55,8 +53,8 @@ function images(){
         imagemin.svgo({
           plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
         }),
-      ]))
-      .pipe(dest('dist/images'))
+    ]))
+    .pipe(dest('dist/images'))
 }
 
 function clear(){
@@ -65,10 +63,10 @@ function clear(){
 
 function build(){
   return src([
-      "app/*.html",
-      "app/js/main.min.js",
-      "app/css/styles.min.css",
-      "app/fonts/**/*",
+      'app/*.html',
+      'app/js/main.min.js',
+      'app/css/styles.min.css',
+      'app/fonts/**/*',
     ], {base:'app'})
     .pipe(dest('dist'));
 }
@@ -77,7 +75,7 @@ exports.styles          = styles;
 exports.watching        = watching;
 exports.browsersync     = browsersync;
 exports.images          = images;
-exports.clear  = clear;
+exports.clear           = clear;
 
 exports.default         = parallel(scripts, styles, browsersync, watching);
 
