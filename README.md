@@ -16,8 +16,9 @@
   ```shell
   $ gulp
   ```
-4. **Fun**
-5. To optimize images and project build to _dist folder_, run
+**4. Fun**
+
+5. To optimize images and project build to _dist_ folder, run
   ```shell
   $ gulp build
   ```
@@ -35,4 +36,4 @@
 ## Options:
 
 - **gulp default** => run in parallel watching scss styles, scripts, browsersync
-- **gulp build** => run build in _dest_ folder
+- **gulp build** => run build in _dist_ folder
