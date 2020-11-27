@@ -1,6 +1,6 @@
 # Gulp boilerplate / Front-end, static, jquery
 
-## Light Gulp boilerplate Front-end development for simple static projects.
+**Light Gulp boilerplate Front-end development for simple static projects.**
 
 ## Quick start
 
