@@ -1,4 +1,4 @@
-# Front-end gulp boilerplate
+# Gulp boilerplate / Front-end, static, jquery
 
 ## Light Gulp boilerplate Front-end development for simple static projects.
 
