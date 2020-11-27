@@ -16,8 +16,8 @@
   ```shell
   $ gulp
   ```
-3. **Fun**
-4. To optimize images and project build to _dist folder_, run
+4. **Fun**
+5. To optimize images and project build to _dist folder_, run
   ```shell
   $ gulp build
   ```
