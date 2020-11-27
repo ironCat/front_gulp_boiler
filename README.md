@@ -6,7 +6,7 @@
 
 1. Clone this repo
   ```shell
-  git clone git@github.com:ironCat/front_gulp_boiler.git
+  $ git clone git@github.com:ironCat/front_gulp_boiler.git
   ```
 2. To install dependencies
   ```shell
