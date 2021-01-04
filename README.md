@@ -32,6 +32,7 @@
 - "gulp-imagemin": "^7.1.0",
 - "browser-sync": "^ 2.26.13",
 - "jquery": "^ 3.5.1"
+- "reset.css"
 
 ## Options:
 

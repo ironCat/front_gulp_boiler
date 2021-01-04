@@ -25,15 +25,16 @@ function scripts(){
 }
 
 function styles(){
-  return src('app/scss/*.scss')
-    // .pipe(scss({outputStyle: 'expanded'})) // no min
-    .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(concat('styles.min.css'))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 version'],
-      grid: true
-    }))
-    .pipe(dest('app/css'))
+  return src("app/scss/*.scss")
+    .pipe(scss({ outputStyle: "compressed" })) // use 'expanded' for no min
+    .pipe(concat("styles.min.css"))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 10 version"],
+        grid: true,
+      })
+    )
+    .pipe(dest("app/css"))
     .pipe(browserSync.stream());
 }
 
@@ -62,13 +63,16 @@ function clear(){
 }
 
 function build(){
-  return src([
-      'app/*.html',
-      'app/js/main.min.js',
-      'app/css/styles.min.css',
-      'app/fonts/**/*',
-    ], {base:'app'})
-    .pipe(dest('dist'));
+  return src(
+    [
+      "app/*.html",
+      "app/js/main.min.js",
+      "app/css/reset.css",
+      "app/css/styles.min.css",
+      "app/fonts/**/*",
+    ],
+    { base: "app" }
+  ).pipe(dest("dist"));
 }
 exports.scripts         = scripts;
 exports.styles          = styles;
